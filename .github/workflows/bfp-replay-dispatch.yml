@@ -1,13 +1,8 @@
+name: BFP Replay Dispatch
 on:
   workflow_dispatch:
-
---- a/.github/workflows/edge.yml
-+++ b/.github/workflows/edge.yml
-@@ -39,4 +39,4 @@
-       uses: coverallsapp/github-action@master
-       with:
-         github-token: ${{ secrets.github_token }}
--        parallel-finished: true
-+        parallel-finished: true
-
-# bfp-replay-registration: a7e73b981827-llm
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'bfp replay dispatch probe'
